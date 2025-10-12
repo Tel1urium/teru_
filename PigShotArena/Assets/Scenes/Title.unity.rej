@@ -1,0 +1,8 @@
+diff a/Butaball/Assets/Scenes/Title.unity b/Butaball/Assets/Scenes/Title.unity	(rejected hunks)
+@@ -708,6 +708,9 @@
+       value: 
+ 
+       objectReference: {fileID: 2100000, guid: b16cb8713197b06409908423ed627b00, type: 2}
+     m_RemovedComponents: []
+     m_RemovedGameObjects: []
+     m_AddedGameObjects: []

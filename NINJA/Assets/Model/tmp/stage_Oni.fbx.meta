@@ -1,0 +1,328 @@
+fileFormatVersion: 2
+guid: fef084d89d6f96346a64e2493fd53510
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface1
+    second: {fileID: 2100000, guid: 5789ba60069cbb345a5e7c5c5383ba5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_Honden_jimen1
+    second: {fileID: 2100000, guid: 24ee16421ba12464ba694ce5a58de9f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_Honden_tatemono1
+    second: {fileID: 2100000, guid: e859cc10b753fa841b306853bba9669c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_Honden_yane1
+    second: {fileID: 2100000, guid: 6762105882be2be4ab16715b2e68e393, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_Honden_yane_sub1
+    second: {fileID: 2100000, guid: ce5fb7b928ddada4ca5f9f856be879b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_aka_hasira
+    second: {fileID: 2100000, guid: 8aaba677a1476274ca2e701779ea8f06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_chouchin
+    second: {fileID: 2100000, guid: f3ac9519e3db0b9458dd8fba664c5c88, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_gold
+    second: {fileID: 2100000, guid: a8003d84e7c76ad4680b5c70d20f54d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_hannsya
+    second: {fileID: 2100000, guid: 536473ddac50f104591f822109943372, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_hounou
+    second: {fileID: 2100000, guid: 44fc12ef655061542a4283ef42f89aa8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_isigaki
+    second: {fileID: 2100000, guid: 9300cd835507a2e4ab4e42a603d4d051, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_itazai
+    second: {fileID: 2100000, guid: 883254d53e2dc064f91c5ae46b7bc652, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_jimen1
+    second: {fileID: 2100000, guid: af11815bbf4c049408e53f241c53a58e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_jimen_tuchi
+    second: {fileID: 2100000, guid: 2a92f946f8c4d214e9f71c491c802cd1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_kabe
+    second: {fileID: 2100000, guid: 0458741f382a13449877b57cd7d0f6bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_kadan1
+    second: {fileID: 2100000, guid: be1930837c14d604a8ef214669e62a95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_kaidan5
+    second: {fileID: 2100000, guid: f196b629970ac5d41b259afb3a263caa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_kaidan6
+    second: {fileID: 2100000, guid: 6cc6ffb440c4b6f4abc2c4f6de9d80e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_kawara
+    second: {fileID: 2100000, guid: 2dc978f047ea62247b967289404bceb1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_konkuri
+    second: {fileID: 2100000, guid: 6a7b70a00ea1c874193b332047962350, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_kuro
+    second: {fileID: 2100000, guid: bbef0ea91c75a184d94b68bf6dc1aa6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_oka
+    second: {fileID: 2100000, guid: d4de14353c32f2d43bdc44be574304dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_take
+    second: {fileID: 2100000, guid: 0acf24970595aba4a97ee0941fd8aa63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_take_ha
+    second: {fileID: 2100000, guid: 514530aa5ea88044fb11c81cdeab2a18, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_take_itapori
+    second: {fileID: 2100000, guid: 581e9b00789c32c468d0dbf56466f4c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_take_kabe
+    second: {fileID: 2100000, guid: 2122486100282884b8c50b7ac2d74aca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_torii_kanban
+    second: {fileID: 2100000, guid: 38325e27c0d1bf64e992355b7d5e1385, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torii_tuki
+    second: {fileID: 2100000, guid: 5e48de8d95a7ce74982c1010092d2850, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Torii_Honden_jimen_UV
+    second: {fileID: 2800000, guid: 74d373dcd887819479a4abf94d4d36dc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Torii_Honden_tatemono_UV
+    second: {fileID: 2800000, guid: 2183d0d0a21182d4183c3816e59c264d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Torii_Honden_yane_UV
+    second: {fileID: 2800000, guid: b58dff43dba641949b1263d78a99a756, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Torii_Honden_yane_UV_sp
+    second: {fileID: 2800000, guid: 34de99cfa6c971f4a8b2c9a6314e7ce4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Torii_Honden_yane_sub_UV
+    second: {fileID: 2800000, guid: 832fea4b84a49514f9dea64ac2c4ee99, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Torii_jimen_UV
+    second: {fileID: 2800000, guid: 02fbd547e4f19a84183c5ee1519b9dde, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Torii_kadan_UV
+    second: {fileID: 2800000, guid: 1164d569045904245bffa6b10c777430, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Torii_kadan_UV_sp
+    second: {fileID: 2800000, guid: f223b9d8c25b86649bc7ff6400ee4d75, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Torii_kaidan2_UV
+    second: {fileID: 2800000, guid: a4e8683c4b87f0440a4b805fba297caa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Torii_kaidan2_UV_bu
+    second: {fileID: 2800000, guid: c255e915fbe029f408a22ac6a77ba439, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Torii_kaidan_UV
+    second: {fileID: 2800000, guid: 9dd3341bbe12af644a5e37df4cd7a879, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Torii_kaidan_UV_sp
+    second: {fileID: 2800000, guid: 05cab4886d548e448b9b1b9e59c22755, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Torii_torii,kannban_UV
+    second: {fileID: 2800000, guid: d07d5803da0edb2418e12c36d9ed5321, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: torii_oka
+    second: {fileID: 2800000, guid: cfe95c45c22e0474498b86acc1c43b7c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: torii_saisennbako_moji_UV2
+    second: {fileID: 2800000, guid: 4ac298b1f79409f459d007052ba33274, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: torii_saisennbako_moji_UV2_bump
+    second: {fileID: 2800000, guid: d3f08f50a93f6bf4a96ec4d7c5c949fd, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
