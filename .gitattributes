@@ -1,35 +1,30 @@
 # =========================================================
 # Git Large File Storage (Git LFS) Tracking for Unity Assets
 # =========================================================
-
 # 3D Models
 *.fbx filter=lfs diff=lfs merge=lfs -text
 *.obj filter=lfs diff=lfs merge=lfs -text
 *.blend filter=lfs diff=lfs merge=lfs -text
-
 # Textures and Images
 *.png filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
 *.jpeg filter=lfs diff=lfs merge=lfs -text
 *.psd filter=lfs diff=lfs merge=lfs -text
 *.tga filter=lfs diff=lfs merge=lfs -text
-
 # Audio Files
 *.wav filter=lfs diff=lfs merge=lfs -text
 *.mp3 filter=lfs diff=lfs merge=lfs -text
 *.ogg filter=lfs diff=lfs merge=lfs -text
-
 # Videos
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 *.mov filter=lfs diff=lfs merge=lfs -text
-
 # Unity Specific Binary Assets
 *.unity filter=lfs diff=lfs merge=lfs -text     
 *.prefab filter=lfs diff=lfs merge=lfs -text    
 *.asset filter=lfs diff=lfs merge=lfs -text     
 *.controller filter=lfs diff=lfs merge=lfs -text
-
 # =========================================================
 # LFS EXCLUSIONS (重要: ProjectSettingsなどはLFSから除外)
 # =========================================================
 # LFS管理から除外し、通常のテキストベースのGit管理に戻す（コンフリクト対策）
+*.zip filter=lfs diff=lfs merge=lfs -text
