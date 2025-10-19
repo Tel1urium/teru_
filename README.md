@@ -27,6 +27,7 @@
 ├── PigSAhotArena/             (Unityプロジェクト。内部に README_TECH.md を配置)
 ├── PigSAhotArena_execution.zip (実行ファイル)
 └── README.md                  (本ファイル。全体概要)
+```text
 
 ### 2. 各ファイルの利用方法（全プロジェクト共通）
 
