@@ -18,13 +18,14 @@
 
 提出フォルダは、以下の構造となっております。実行ファイル（.zip）は、各プロジェクトフォルダの外に並列で配置しており、スムーズなご確認が可能です。
 
+```text
 / teru_
-├── / Lucetica                 (Unityプロジェクト。内部に README_TECH.md を配置)
-├── / Lucetica_execution.zip   (実行ファイル)
-├── / NINJA                    (Unityプロジェクト。内部に README_TECH.md を配置)
-├── / NINJA_execution.zip      (実行ファイル)
-├── / PigSAhotArena            (Unityプロジェクト。内部に README_TECH.md を配置)
-├── / PigSAhotArena_execution.zip (実行ファイル)
+├── Lucetica/                  (Unityプロジェクト。内部に README_TECH.md を配置)
+├── Lucetica_execution.zip     (実行ファイル)
+├── NINJA/                     (Unityプロジェクト。内部に README_TECH.md を配置)
+├── NINJA_execution.zip        (実行ファイル)
+├── PigSAhotArena/             (Unityプロジェクト。内部に README_TECH.md を配置)
+├── PigSAhotArena_execution.zip (実行ファイル)
 └── README.md                  (本ファイル。全体概要)
 
 ### 2. 各ファイルの利用方法（全プロジェクト共通）
