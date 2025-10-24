@@ -1,9 +1,14 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class minimeteor : MonoBehaviour
 {
 
+    MapGimmick mapGimmick;
+
     bool HitCheck = false;
+    public GameObject BoomEfe;      //爆発エフェクト
     EStateMachine<minimeteor> stateMachine; 
     enum state
     {
@@ -19,6 +24,9 @@ public class minimeteor : MonoBehaviour
         stateMachine.Add<BoomState>((int)state.Boom);
         stateMachine.Add<EndState>((int)state.End);
         stateMachine.OnStart((int)state.Move);
+
+        mapGimmick = GameObject.Find("GimmickManager").GetComponent<MapGimmick>();
+
     }
 
     // Update is called once per frame
@@ -53,31 +61,43 @@ public class minimeteor : MonoBehaviour
         if (other.gameObject.tag=="map")
         {
             Debug.Log("meteorがmapに落下");
+            mapGimmick.DestroyDanger();
             HitCheck = true;
         }
+        var player = other.GetComponent<Player>();
+        if(player != null)
+        {
+            player.OnHit();
+            
+            Debug.Log("playerHit");
+        }
     }
-
     public class BoomState : EStateMachine<minimeteor>.StateBase
     {
+
         public override void OnStart()
         {
             //エフェクトの再生
+            Instantiate(Owner.BoomEfe, Owner.transform.position, Quaternion.identity);
         }
         public override void OnUpdate()
         {
-            //プレイヤーに情報を渡す
             StateMachine.ChangeState((int)state.End);      //次のステートに移行
         }
         public override void OnEnd()
         {
 
+            //エフェクトの再生
         }
     }
+
+    
+
     public class EndState : EStateMachine<minimeteor>.StateBase
     {
         public override void OnStart()
         {
-
+            Destroy(Owner.gameObject);
         }
         public override void OnUpdate()
         {
@@ -88,8 +108,4 @@ public class minimeteor : MonoBehaviour
 
         }
     }
-
-    
-
-
 }

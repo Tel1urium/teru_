@@ -17,21 +17,11 @@ public class dead : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("player1"))
+        var player=other.GetComponent<Player>();
+        if (player != null)
         {
-            Debug.Log("Dead");
-            player1.alive1 = false;
-            isPlayerDead = true;
+            player.OnHit();
         }
-        else
-        {
-            Debug.Log("Dead");
-            Debug.Log("p@layer2");
-            player1.alive1 = true;
-            isPlayerDead = true;
-            //SceneManager.LoadScene("Result");
-        }
-        
     }
 }
 

@@ -1,35 +1,54 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+
 public class GameManager : MonoBehaviour
 {
     public enum State
     {
-        Start,   // ÉJÉEÉìÉgÉ_ÉEÉìíÜ
-        GameStartMessage, // "GAME START!!!" ï\é¶íÜ
-        Ingame,  // ÉQÅ[ÉÄêiçsíÜ
+        Start,
+        GameStartMessage,
+        Ingame,
         End
     }
 
-    [SerializeField] private TMP_Text CDtext;
-    [SerializeField] private float countdownTime = 3f; // ÉJÉEÉìÉgÉ_ÉEÉìïbêî
-    [SerializeField] private float gameStartDisplayDuration = 1.5f; // "GAME START!!!" ÇÃï\é¶éûä‘
+    [Header("UI")]
+    [SerializeField] private Image countdownImage;
+
+    [Header("Sprites")]
+    [SerializeField] private Sprite sprite3;
+    [SerializeField] private Sprite sprite2;
+    [SerializeField] private Sprite sprite1;
+    [SerializeField] private Sprite spriteGo;
+
+    [Header("Sizes (ÂπÖ, È´ò„Åï)")]
+    [SerializeField] private Vector2 size3 = new Vector2(100, 100);
+    [SerializeField] private Vector2 size2 = new Vector2(100, 100);
+    [SerializeField] private Vector2 size1 = new Vector2(100, 100);
+    [SerializeField] private Vector2 sizeGo = new Vector2(558, 88);
+
+    [Header("Timing")]
+    [SerializeField] private float countdownTime = 3f;
+    [SerializeField] private float gameStartDisplayDuration = 1.5f;
 
     private float countdown;
     private float gameStartTimer;
-    private State state;
+    private bool gameStarted = false;
+
+    public State state;
 
     void Start()
     {
         Application.targetFrameRate = 60;
 
-        if (CDtext == null)
+        if (countdownImage == null)
         {
-            CDtext = GetComponent<TMP_Text>();
+            Debug.LogError("countdownImage „Åå Inspector „Å´„Ç¢„Çµ„Ç§„É≥„Åï„Çå„Å¶„ÅÑ„Åæ„Åõ„ÇìÔºÅ");
+            return;
         }
 
         countdown = countdownTime;
         state = State.Start;
+        countdownImage.gameObject.SetActive(true);
     }
 
     void Update()
@@ -37,34 +56,15 @@ public class GameManager : MonoBehaviour
         switch (state)
         {
             case State.Start:
-                countdown -= Time.deltaTime;
-
-                if (countdown > 0)
-                {
-                    CDtext.text = Mathf.CeilToInt(countdown).ToString(); // è¨êîì_êÿÇËè„Ç∞
-                }
-                else
-                {
-                    CDtext.text = "GAME START!!!";
-                    gameStartTimer = gameStartDisplayDuration;
-                    state = State.GameStartMessage;
-                }
+                HandleCountdown();
                 break;
 
             case State.GameStartMessage:
-                gameStartTimer -= Time.deltaTime;
-                if (gameStartTimer <= 0)
-                {
-                    state = State.Ingame; 
-                    Debug.Log("Game has started.");
-                    CDtext.gameObject.SetActive(false); // ÉeÉLÉXÉgîÒï\é¶
-                   
-                    
-                }
+                HandleGameStartMessage();
                 break;
 
             case State.Ingame:
-                // é¿ç€ÇÃÉQÅ[ÉÄÉçÉWÉbÉNÇÕÇ±Ç±Ç≈ìÆÇ©Ç∑
+                // „Ç≤„Éº„É†‰∏≠„ÅÆÂá¶ÁêÜ
                 break;
 
             case State.End:
@@ -72,6 +72,51 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // èÛë‘ÇäOïîÇ©ÇÁéQè∆ÇµÇΩÇ¢Ç∆Ç´ópÇÃGetter
+    void HandleCountdown()
+    {
+        countdown -= Time.deltaTime;
+
+        // „Ç´„Ç¶„É≥„Éà„Åî„Å®„Å´„Çπ„Éó„É©„Ç§„Éà„Å®„Çµ„Ç§„Ç∫„ÇíÂàá„ÇäÊõø„Åà
+        if (countdown > 2f)
+        {
+            SetCountdownSprite(sprite3, size3);
+        }
+        else if (countdown > 1f)
+        {
+            SetCountdownSprite(sprite2, size2);
+        }
+        else if (countdown > 0f)
+        {
+            SetCountdownSprite(sprite1, size1);
+        }
+        else
+        {
+            SetCountdownSprite(spriteGo, sizeGo);
+            gameStartTimer = gameStartDisplayDuration;
+            state = State.GameStartMessage;
+            Debug.Log("Go!!");
+        }
+    }
+
+    void HandleGameStartMessage()
+    {
+        gameStartTimer -= Time.deltaTime;
+
+        if (gameStartTimer <= 0 && !gameStarted)
+        {
+            gameStarted = true;
+            countdownImage.gameObject.SetActive(false);
+            state = State.Ingame;
+            Debug.Log(" Game Start!");
+        }
+    }
+
+    // „Çπ„Éó„É©„Ç§„ÉàÂàá„ÇäÊõø„Åà + „Çµ„Ç§„Ç∫Ë™øÊï¥
+    void SetCountdownSprite(Sprite sprite, Vector2 size)
+    {
+        countdownImage.sprite = sprite;
+        countdownImage.rectTransform.sizeDelta = size;
+    }
+
     public State GetGameState() => state;
 }

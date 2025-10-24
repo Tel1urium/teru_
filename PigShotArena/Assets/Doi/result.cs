@@ -1,33 +1,37 @@
+using System.Drawing;
 using UnityEngine;
 
 public class result : MonoBehaviour
 {
-    public GameObject p1;
-    public GameObject p2;
+    public Renderer p1;
+    public Renderer p2;
    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-      
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(player1.alive1 == false )
+        
+        if(WinCon.WinPlayer)
         {
-            ChangeColor(p2, Color.blue);
-            ChangeColor(p1, Color.red);
+            ChangeColor(p2, UnityEngine.Color.blue);
+            ChangeColor(p1, UnityEngine.Color.red);
+            Debug.Log("色変更");
         }
-        else if(player1.alive1 == true)
+        else
         {
-            ChangeColor(p2, Color.red);
-            ChangeColor(p1, Color.blue);
-        } 
+            ChangeColor(p2, UnityEngine.Color.red);
+            ChangeColor(p1, UnityEngine.Color.blue);
+            Debug.Log("色変更");
+        }
+
     }
-    void ChangeColor(GameObject obj, Color color)
+    void ChangeColor(Renderer renderer, UnityEngine.Color color)
     {
-        Renderer renderer = obj.GetComponent<Renderer>();
         if (renderer != null)
         {
             renderer.material.color = color;
