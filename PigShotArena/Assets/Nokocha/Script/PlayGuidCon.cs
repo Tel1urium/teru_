@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using TMPro;
+using Cysharp.Threading.Tasks.Triggers;
 
 public class PlayGuidCon : MonoBehaviour
 {
@@ -28,11 +30,15 @@ public class PlayGuidCon : MonoBehaviour
     public Button opnbtn;
     public Button clzbtn;
 
+    [Header("テキスト設定")]
+    public GameObject text;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         clzbtn.interactable = false;
         clzbtn.gameObject.SetActive(false);
+        text.gameObject.SetActive(false);
 
     }
 
@@ -79,12 +85,23 @@ public class PlayGuidCon : MonoBehaviour
 
     private IEnumerator TextImageFadeIn()
     {
+
+        //textゲームオブジェクトをアクティブにする
+        text.gameObject.SetActive(true);
+        //textからTextMeshProUGUIコンポーネントを取得
+        TextMeshProUGUI tmpText = text.GetComponent<TextMeshProUGUI>();
+
         float t = 0f;
         Color color = Aimage.color;
+        Color textColor = tmpText.color;
+
+        textColor.a = 0f;
+        tmpText.color = textColor;
 
         while (t < FadeDuration)
         {
             t += Time.deltaTime;
+            float alpha = Mathf.Clamp01(t / FadeDuration);
             color.a = Mathf.Clamp01(t / FadeDuration);
             Aimage.color = color;
             Entryimage.color = color;
@@ -92,6 +109,11 @@ public class PlayGuidCon : MonoBehaviour
             Move.color = color;
             RT.color = color;
             Charge.color = color;
+
+            //テキストのアルファも設定
+            textColor.a = alpha;
+            tmpText.color = textColor;
+
             yield return null;
         }
     }

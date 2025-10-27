@@ -25,7 +25,7 @@ public class MapGimmick : MonoBehaviour
     public float AreaX = 1.0f;
     //ボールのフラグ
     public bool ballTrigger = true;
-    //ボールフラグ
+    //メテオフラグ
     public bool meteorTrigger = true;
     //インスペクターからテーブルのコライダーを設定
     public Collider tableCollider;
@@ -71,6 +71,7 @@ public class MapGimmick : MonoBehaviour
             if(gameTime > MeteorTime)
             {
                 Meteorgimmick();
+                meteorTrigger = false;
             }
 
         }
@@ -89,7 +90,9 @@ public class MapGimmick : MonoBehaviour
         startPoint = spawnpoint.position;
         //ray呼び出し
         Rayhit();
+        //ゲーム内時間リセット
         gameTime = 0;
+        //ボールトリガー復活
         ballTrigger = true;
         //数秒後に選ばれた場所の位置メテオを生成
         await UniTask.Delay(TimeSpan.FromSeconds(3));
@@ -116,6 +119,8 @@ public class MapGimmick : MonoBehaviour
                 Vector3 spawnposition = new Vector3(randomX, tableBounds.max.y + PosY, randomZ);
                 //ボールの生成
                 Instantiate(ball, spawnposition, Quaternion.identity);
+                //メテオトリガー復活
+                meteorTrigger = true;
             }
         }
     }
