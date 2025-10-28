@@ -23,7 +23,7 @@ public class BoundReflect : MonoBehaviour
         Vector3 velocity = rb.linearVelocity;
         float speed = velocity.magnitude;
 
-        if (speed < 0.01f) return;
+        if (speed < 0.0001f) return;
 
         Vector3 direction = velocity.normalized;
         Ray ray = new Ray(transform.position, Vector3.zero);

@@ -27,6 +27,11 @@ public class ScoreManager : MonoBehaviour
         //    Destroy(gameObject);
         //}
     }
+    private void Update()
+    {
+        if(Player1Score < 0) { Player1Score = 0; }
+        if (Player2Score < 0) { Player2Score = 0; }
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -46,8 +51,5 @@ public class ScoreManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

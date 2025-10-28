@@ -73,11 +73,10 @@ public class Player : MonoBehaviour
         if (gameManager == null || gameManager.GetGameState() != GameManager.State.Ingame)
             return; // ゲームが始まっていないので物理処理もしない
         yPos = this.transform.position.y;
-        if(yCurrent < yPos)this.transform.position = new Vector3(this.transform.position.x, yCurrent, this.transform.position.z);
+        if (yCurrent < yPos)this.transform.position = new Vector3(this.transform.position.x, yCurrent, this.transform.position.z);
         else if(yCurrent > yPos) yCurrent = yPos;
         CollisionPredictionAndReflect();
         stateMachine.OnUpdate();
-        //gameObject.SetActive(Dead);
     }
 
     void LateUpdate()
@@ -253,13 +252,12 @@ public class Player : MonoBehaviour
             if (Owner.chargeEffect.isPlaying) { Owner.chargeEffect.Stop(); }
             Owner.rb.linearVelocity = Vector3.zero;
             Owner.rb.linearVelocity *= Owner.cDrag;
-            //Destroy(Owner.gameObject);
             if (Owner.rize.IsPressed()) { StateMachine.ChangeState((int)State.Idle); }
         }
         public override void OnEnd()
         {
-            if (Owner.gameObject.CompareTag("ball1")) { ScoreManager.Player1Score -= 2; }
-            if (Owner.gameObject.CompareTag("ball2")) { ScoreManager.Player2Score -= 2; }
+            if (Owner.gameObject.CompareTag("player1")) { ScoreManager.Player1Score -= 2; Debug.Log(ScoreManager.Player1Score); }
+            if (Owner.gameObject.CompareTag("player2")) { ScoreManager.Player2Score -= 2; Debug.Log(ScoreManager.Player2Score); }
             Owner.yPos = Owner.firstPos.y;
             Owner.yCurrent = Owner.firstPos.y;
             Owner.transform.position = Owner.firstPos;
@@ -299,7 +297,7 @@ public class Player : MonoBehaviour
         Vector3 velocity = rb.linearVelocity;
         float speed = velocity.magnitude;
 
-        if (speed < 0.01f) return;
+        if (speed < 0.0001f) return;
 
         Vector3 direction = velocity.normalized;
         Ray ray = new Ray(transform.position, Vector3.zero);

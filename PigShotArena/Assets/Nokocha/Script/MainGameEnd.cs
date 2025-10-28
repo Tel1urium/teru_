@@ -50,4 +50,8 @@ public class MainGameEnd : MonoBehaviour
         MainGameTimeCount();
         MainGameEndCheck();
     }
+    public float GetRemainingTime()
+    {
+        return gameMaxTime - gameTime;
+    }
 }
