@@ -26,6 +26,7 @@
 ├── NINJA_execution.zip        (実行ファイル)
 ├── PigSAhotArena/             (Unityプロジェクト。内部に README_TECH.md を配置)
 ├── PigSAhotArena_execution.zip (実行ファイル)
+├── 照岡隆誠・ポートフォリオ 　　 (自身のポートフォリオスライド)
 └── README.md                  (本ファイル。全体概要)
 ```
 
